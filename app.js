@@ -1,45 +1,23 @@
-const http         = require('http'),
-      fs           = require('fs'),
-      path         = require('path'),
-      contentTypes = require('./utils/content-types'),
-      sysInfo      = require('./utils/sys-info'),
-      env          = process.env;
+var express = require('express');
+var app = express();
 
-let server = http.createServer(function (req, res) {
-  let url = req.url;
-  if (url == '/') {
-    url += 'index.html';
-  }
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 8080;
 
-  // IMPORTANT: Your application HAS to respond to GET /health with status 200
-  //            for OpenShift health monitoring
+// set the view engine to ejs
+app.set('view engine', 'ejs');
 
-  if (url == '/health') {
-    res.writeHead(200);
-    res.end();
-  } else if (url == '/info/gen' || url == '/info/poll') {
-    res.setHeader('Content-Type', 'application/json');
+// make express look in the public directory for assets (css/js/img)
+app.use(express.static(__dirname + '/static'));
 
-    res.end(JSON.stringify(sysInfo[url.slice(6)]()));
-  } else {
-    fs.readFile('./static' + url, function (err, data) {
-      if (err) {
-        res.writeHead(404);
-        res.end('Not found');
-      } else {
-        let ext = path.extname(url).slice(1);
-        console.log(contentTypes[ext]);
-        let content =contentTypes[ext]?contentTypes[ext]:'';
-        res.setHeader('Content-Type', content);
-        if (ext === 'html') {
-          res.setHeader('Cache-Control', 'no-cache, no-store');
-        }
-        res.end(data);
-      }
-    });
-  }
+// set the home page route
+app.get('/', function(req, res) {
+
+	// ejs render automatically looks in the views folder
+	res.render('index');
 });
 
-server.listen(env.NODE_PORT || 3000, env.NODE_IP || 'localhost', function () {
-  console.log(`Application worker ${process.pid} started...`);
+app.listen(port, function() {
+	console.log('Our app is running on http://localhost:' + port);
 });
