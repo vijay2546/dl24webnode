@@ -19,7 +19,7 @@ let server = http.createServer(function (req, res) {
     res.end();
   } else if (url == '/info/gen' || url == '/info/poll') {
     res.setHeader('Content-Type', 'application/json');
-    res.setHeader('Cache-Control', 'no-cache, no-store');
+
     res.end(JSON.stringify(sysInfo[url.slice(6)]()));
   } else {
     fs.readFile('./static' + url, function (err, data) {
@@ -28,7 +28,9 @@ let server = http.createServer(function (req, res) {
         res.end('Not found');
       } else {
         let ext = path.extname(url).slice(1);
-        res.setHeader('Content-Type', contentTypes[ext]);
+        console.log(contentTypes[ext]);
+        let content =contentTypes[ext]?contentTypes[ext]:'';
+        res.setHeader('Content-Type', content);
         if (ext === 'html') {
           res.setHeader('Cache-Control', 'no-cache, no-store');
         }
