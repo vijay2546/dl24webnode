@@ -1,5 +1,5 @@
 {
-  "name": "NMF media",
+  "name": "NMF_media",
   "version": "1.0.1",
   "description": "NMF media web developement",
   "private": true,
@@ -7,6 +7,6 @@
   "scripts": {
     "start": "node --use_strict start.js"
   },
-  "author": "vijay <mailat365@gmail.com>",
-  "license": "NMF media"
+  "author": "nick756@gmail.com",
+  "license": "NMF_media"
 }
