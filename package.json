@@ -2,7 +2,6 @@
   "name": "NMF_media",
   "version": "2.0.1",
   "description": "NMF media web developement",
-  "private": true,
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
