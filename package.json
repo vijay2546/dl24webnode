@@ -3,9 +3,9 @@
   "version": "1.0.1",
   "description": "NMF media web developement",
   "private": true,
-  "main": "start.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node --use_strict start.js"
+    "start": "node --use_strict app.js"
   },
   "author": "nick756@gmail.com",
   "license": "NMF_media"
