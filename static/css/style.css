@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -25,7 +25,7 @@ body.fh5co-offcanvas {
 }
 
 a {
-  color: #4CB648;
+  color: ##7b7979!important;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -87,12 +87,15 @@ top:80px;
 #fh5co-header-section
 {
 position: fixed;
-  background: #000;
+  background: #fbfbfb;
 }
 .fh5co-cover,
 .fh5co-hero {
   position: relative;
   height: 720px;
+}
+#fh5co-schedule-section{
+  padding:6em 0em!important;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover,
@@ -100,6 +103,7 @@ position: fixed;
     height: 620px;
   }
 }
+
 .fh5co-cover.fh5co-hero-2,
 .fh5co-hero.fh5co-hero-2 {
   height: 520px;
@@ -221,7 +225,7 @@ position: fixed;
 }
 
 .sf-menu a {
-  color: rgba(255, 255, 255, 0.5);
+  color: #a09b9b;
   padding: 0.75em 1em !important;
   font-weight: normal;
   border-left: none;
@@ -234,11 +238,11 @@ position: fixed;
   font-weight: 300;
 }
 .sf-menu a:hover, .sf-menu a:focus {
-  color: #fff !important;
+  color: #a09b9b !important;
 }
 
 .sf-menu li.active a:hover, .sf-menu li.active a:focus {
-  color: #fff;
+  color:  #a09b9b;
 }
 
 .sf-menu li,
@@ -261,7 +265,7 @@ position: fixed;
 .sf-menu ul li:hover a,
 .sf-menu ul li.sfHover a,
 .sf-menu li.active a {
-  color: #fff;
+  color: #484747;
 }
 
 .sf-menu ul li:hover,
@@ -1230,18 +1234,18 @@ position: fixed;
   *display: inline;
   width: 30px;
   height: 2px;
-  color: #fff;
+  color: #afaaaa;
   font: bold 14px/.4 Helvetica;
   text-transform: uppercase;
   text-indent: -55px;
-  background: #fff;
+  background: #afaaaa;
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle i::before, .fh5co-nav-toggle i::after {
   content: '';
   width: 30px;
   height: 2px;
-  background: #fff;
+  background: #afaaaa;
   position: absolute;
   left: 0;
   -webkit-transition: 0.2s;
