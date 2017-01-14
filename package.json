@@ -1,11 +1,25 @@
 {
-  "name": "NMF_media",
-  "version": "2.0.1",
-  "description": "NMF media web developement",
+  "name": "node-js-sample",
+  "version": "2.2.0”,
+  "description": "A sample Node.js app using Express 4",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
-  "author": "nick756@gmail.com",
-  "license": "NMF_media"
+  "engines": {
+    "node":"6.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vijay2546/dl24webnode.git"
+  },
+  "keywords": [
+    "node",
+    "heroku"
+  ],
+  "author": “Vijay singh”,
+  "contributors": [
+    "Vijay <vijay2546@gmail.com>"
+  ],
+  "license": "MIT"
 }
