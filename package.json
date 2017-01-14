@@ -9,6 +9,9 @@
   "engines": {
     "node":"6.9.2"
   },
+  "dependencies": {
+    "express": "^4.13.3"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/vijay2546/dl24webnode.git"
