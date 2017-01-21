@@ -23,6 +23,9 @@ body {
 body.fh5co-offcanvas {
   overflow: hidden;
 }
+#main_text{
+  margin-left:10px;
+}
 
 a {
   color: ##7b7979!important;
@@ -32,7 +35,7 @@ a {
 }
 a:hover {
   text-decoration: none !important;
-  color: #4CB648 !important;
+  color: #2ce6e1 !important;
 }
 
 p, ul, ol {
@@ -40,6 +43,7 @@ p, ul, ol {
   font-size: 20px;
   color: #848484;
   font-family: "Roboto", Arial, sans-serif;
+  padding-left:7px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,17 +59,17 @@ figure {
 
 ::-webkit-selection {
   color: #fcfcfc;
-  background: #4CB648;
+  background: #2ce6e1;
 }
 
 ::-moz-selection {
   color: #fcfcfc;
-  background: #4CB648;
+  background: #2ce6e1;
 }
 
 ::selection {
   color: #fcfcfc;
-  background: #4CB648;
+  background: #2ce6e1;
 }
 .fh5co-cover {
   top:0px!important;
@@ -80,14 +84,15 @@ figure {
 #fh5co-header-section
 {
   position: fixed!important;
+
 }
 .fh5co-hero{
-top:80px;
+
 }
 #fh5co-header-section
 {
 position: fixed;
-  background: #fbfbfb;
+  background: transparent;
 }
 .fh5co-cover,
 .fh5co-hero {
@@ -162,7 +167,7 @@ position: fixed;
   top: 50%;
   position: absolute;
   width: 100%;
-  margin-top: -100px;
+
   z-index: 2;
   color: #fff;
 }
@@ -178,6 +183,8 @@ position: fixed;
   font-weight: 300;
   margin-bottom: 10px;
   line-height: 60px;
+  display: inline-block;
+
   letter-spacing: 1px;
 }
 @media screen and (max-width: 768px) {
@@ -225,8 +232,8 @@ position: fixed;
 }
 
 .sf-menu a {
-  color: #a09b9b;
-  padding: 0.75em 1em !important;
+  color: #ccc;
+  padding: 0.75em 2.5em !important;
   font-weight: normal;
   border-left: none;
   border-top: none;
@@ -316,7 +323,7 @@ position: fixed;
 #fh5co-header-section {
   padding: 0;
   position: absolute;
-  top: 0;
+  top: px;
   left: 0;
   width: 100%;
   z-index: 2;
@@ -378,7 +385,7 @@ position: fixed;
 }
 
 #fh5co-primary-menu > li > ul li.active > a {
-  color: #4CB648 !important;
+  color: #2ce6e1 !important;
 }
 #fh5co-primary-menu > li > .sf-with-ul:after {
   border: none !important;
@@ -496,7 +503,7 @@ position: fixed;
   background: none;
 }
 #fh5co-primary-menu .fh5co-sub-menu a:hover {
-  color: #4CB648 !important;
+  color: #2ce6e1 !important;
 }
 
 #fh5co-programs-section,
@@ -504,7 +511,7 @@ position: fixed;
 #fh5co-team-section,
 #fh5co-blog-section,
 #fh5co-contact {
-  padding: 7em 0;
+  padding: 2em 0;
   background: #fff;
 }
 @media screen and (max-width: 768px) {
@@ -591,7 +598,7 @@ position: fixed;
   text-decoration: none;
 }
 .schedule li a.active {
-  background: #4CB648;
+  background: #2ce6e1;
   color: #fff !important;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -713,10 +720,10 @@ position: fixed;
   position: relative;
 }
 .fh5co-pricing .price-box.popular .btn-select-plan {
-  background: #4CB648;
+  background: #2ce6e1;
 }
 .fh5co-pricing .price-box.popular .price {
-  color: #4CB648;
+  color: #2ce6e1;
 }
 .fh5co-pricing .price-box .btn-select-plan {
   padding: 10px 20px;
@@ -944,7 +951,7 @@ position: fixed;
   top: 0;
   left: 0;
   padding: 10px 20px;
-  background: #4CB648;
+  background: #2ce6e1;
 }
 @media screen and (max-width: 768px) {
   .fh5co-blog .meta-date {
@@ -1000,14 +1007,14 @@ position: fixed;
 
 .fh5co-social-icons > a {
   padding: 4px 10px;
-  color: #4CB648;
+  color: #2ce6e1;
 }
 .fh5co-social-icons > a i {
   font-size: 26px;
 }
 .fh5co-social-icons > a:hover, .fh5co-social-icons > a:focus, .fh5co-social-icons > a:active {
   text-decoration: none;
-  color: #212121;
+  color: #2ce6e1;
 }
 
 #footer {
@@ -1085,7 +1092,7 @@ position: fixed;
 }
 #footer #btn-submit {
   color: rgba(255, 255, 255, 0.9) !important;
-  background: #4CB648 !important;
+  background: #2ce6e1 !important;
 }
 #footer .copy-right {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1116,14 +1123,14 @@ position: fixed;
   transition: 0.3s;
 }
 .btn.btn-primary {
-  background: #4CB648;
+  background: #2ce6e1;
   color: #fff;
   border: none !important;
   border: 2px solid transparent !important;
 }
 .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
   box-shadow: none;
-  background: #4CB648;
+  background: #2ce6e1;
   color: #fff !important;
 }
 .btn:hover, .btn:active, .btn:focus {
@@ -1199,14 +1206,14 @@ position: fixed;
   color: rgba(255, 255, 255, 0.4);
 }
 #offcanvas-menu ul li a:hover {
-  color: #4CB648;
+  color: #2ce6e1;
 }
 #offcanvas-menu ul li > .fh5co-sub-menu {
   margin-top: 9px;
   padding-left: 20px;
 }
 #offcanvas-menu ul li.active > a {
-  color: #4CB648;
+  color: #2ce6e1;
 }
 #offcanvas-menu ul .fh5co-sub-menu {
   display: block !important;

@@ -1,6 +1,6 @@
 {
   "name": "node-js-sample",
-  "version": "2.2.0",
+  "version": "3.2.0",
   "description": "A sample Node.js app using Express 4",
   "main": "app.js",
   "scripts": {
@@ -22,7 +22,7 @@
   ],
   "author": "Vijay singh",
   "contributors": [
-    "Vijay <vijay2546@gmail.com>"
+    "Vijay <mailat365@gmail.com>"
   ],
   "license": "MIT"
 }

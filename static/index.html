@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Web development @NMF media</title>
+	<title>Welcome	>>@NMF media</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="web development @NMF media" />
 	<meta name="keywords" content="web development, mobile web development" />
@@ -53,6 +53,67 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+<style>
+
+@-webkit-keyframes fade-in{
+    from{
+        opacity:1;
+        top:0px;
+    }
+    to{
+        opacity:0;
+        top:-5px;
+    }
+}
+.text-animated-one{
+    display:inline;
+    position:relative;
+    top:5px;
+    -webkit-animation:fade-in 4s infinite;
+
+}
+.text-animated-two{
+    opacity:0;
+    display:inline;
+    position:relative;
+
+    -webkit-animation:fade-in 3s infinite;
+
+}
+
+.aggettivi{
+    display:inline;
+    width:100px;
+    height:100px;
+}
+li button {
+	background-color:transparent;
+	color:#ccc;
+}
+li button:hover{
+	background-color:#2ce6e1;
+	color:#5d5858;
+}
+.client-msg-banner{
+	padding: 7% 10%;
+font-size: 2.3em;
+line-height: 1.6;
+color: #cce8e5;
+}
+.chat-btn{
+	position: fixed;
+z-index: 2;
+bottom: 20px;
+right: 0px;
+text-align: right;
+margin-right: 10px;
+background-image: url(images/chat.png);
+width: 60px;
+height: 60px;
+background-size: 100%;
+background-repeat: no-repeat;
+}
+</style>
 
 	</head>
 	<body>
@@ -62,42 +123,21 @@
 			<header id="fh5co-header-section">
 				<div class="container">
 					<div class="nav-header">
-						<a  href="index.html" style="    display: inline-block;" ><img src="images/logo.png" alt="" class="img-responsive logo"></a>
+						<a  href="index.html" style="    display: inline-block;" ><img id="logo_head" src="images/logo.png" alt="" class="img-responsive logo"></a>
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
-								<li class="active">
-									<a href="index.html">Home</a>
-								</li>
-								<li>
-									<a href="classes.html" class="fh5co-sub-ddown">Services</a>
-									 <ul class="fh5co-sub-menu">
-									 	<li><a href="#">Website Designing</a></li>
-									 	<li><a href="#">Web development</a></li>
-										<li><a href="#">LOGO Design</a></li>
-										<li><a href="#">SEO</a></li>
-										<li>
-											<a href="#" class="fh5co-sub-ddown">Marketing</a>
-											<ul class="fh5co-sub-menu">
-												<li><a href="#" target="_blank">Social Marketing</a></li>
-												<li><a href="#" target="_blank">Digital Marketing</a></li>
-											</ul>
-										</li>
-											<li><a href="#">UI Animation</a></li>
-
-									</ul>
-								</li>
-								<li><a href="#">vision</a></li>
-								<li><a href="#">About</a></li>
 								<li><a href="#">Contact</a></li>
+								<li><button id="btnHeader" style="padding:5px;border-radius:5px;">Get a Quote</button></li>
 							</ul>
 						</nav>
 					</div>
 				</div>
 			</header>
 		</div>
+
 		<!-- end:fh5co-header -->
 
 		<div class="fh5co-hero">
@@ -107,9 +147,6 @@
 				<div id="sliderFrame">
 							 <div id="slider">
 									 <img src="images/image-slider-1.png"  />
-									 <img src="images/image-slider-2.png" />
-									 <img src="images/image-slider-3.png"  />
-
 							 </div>
 
 					 </div>
@@ -118,33 +155,43 @@
 						<div class="row">
 
 							<div class="col-md-6" id="main_text">
-								<h2> Creative Web<br> <b>Design &amp; Development</b></h2>
-								<p><span>Created with innovative engineers</span></p>
-								<span><a class="btn btn-primary" href="#">Let's Try It Out</a></span>
+								<h2 style="color:#c2c7c2"> High</h2> <div class="aggettivi">	<h2 class='text-animated-one' style="color:#2ce6e1" id="mainLbl"> <b>Impact</b></h2></div>
+								<p><span> It's time to go Social, We make it simple.</span></p>
+								<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Get a quote</a></span>
 							</div>
 
 						</div>
 					</div>
 				</div>
+				<script>
+				var text=["Impact", "Sales" , "Traffic" , "Revanue"];
+cnt=1;
+				var labelBig =document.getElementById("mainLbl");
+				setInterval(function(){labelBig.innerHTML="<b>"+text[cnt]+"</b>";cnt= cnt==3?0:cnt+1;},4000);
+				//var cover= document.getElementById("cover");
+
+				</script>
 <script>
-var txtContainer= document.getElementById("main_text");
-var cover= document.getElementById("cover");
+//var labelBig= document.getElementById("labelBig");
 
-var mainText=["<h2> Creative Web<br> <b>Design &amp; Development</b></h2><p><span>Created with innovative engineers</span></p><span><a class='btn btn-primary' href='#'>Let's Try It Out</a></span>","<h2> It's time to <br> <b>go Social</b></h2><p><span>We make it simple.</span></p><span><a class='btn btn-primary' href='#'>Let's Try It Out</a></span>","<h2> Let's show <br> your <b>BRAND</b> <br>to the world </h2><p><span>Dominate Safe and Effective SEO</span></p>"];
-var txtCount=1;
-var observer = new MutationObserver(function(mutations) {
-
-    mutations.forEach(function(mutationRecord) {
-        console.log('style changed!');
-console.log(txtCount);
-
-				txtContainer.innerHTML=mainText[txtCount];
-				cover.style.background='url(./images/home-image-'+(txtCount+1)+'.jpg)';
-				txtCount= (txtCount != 2) ?txtCount+1:0;
-    });
-});
-window.onload=setTimeout(function(){var target = document.getElementsByClassName('bgLayer');
-observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });},2000);
+//setTimeout(function(){labelBig.className="fadeAndScale";},2000);
+// var cover= document.getElementById("cover");
+//
+// var mainText=["<h2> Creative Web<br> <b>Design &amp; Development</b></h2><p><span>Created with innovative engineers</span></p><span><a class='btn btn-primary' href='#'>Let's Try It Out</a></span>","<h2> It's time to <br> <b>go Social</b></h2><p><span>We make it simple.</span></p><span><a class='btn btn-primary' href='#'>Let's Try It Out</a></span>","<h2> Let's show <br> your <b>BRAND</b> <br>to the world </h2><p><span>Dominate Safe and Effective SEO</span></p>"];
+// var txtCount=1;
+// var observer = new MutationObserver(function(mutations) {
+//
+//     mutations.forEach(function(mutationRecord) {
+//         console.log('style changed!');
+// console.log(txtCount);
+//
+// 				txtContainer.innerHTML=mainText[txtCount];
+// 				cover.style.background='url(./images/home-image-'+(txtCount+1)+'.jpg)';
+// 				txtCount= (txtCount != 2) ?txtCount+1:0;
+//     });
+// });
+// window.onload=setTimeout(function(){var target = document.getElementsByClassName('bgLayer');
+// observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });},2000);
 
 
 </script>
@@ -152,7 +199,7 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 			</div>
 		</div>
 		<!-- end:fh5co-hero -->
-		<div id="fh5co-schedule-section" class="fh5co-lightgray-section">
+	<!--	<div id="fh5co-schedule-section" class="fh5co-lightgray-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
@@ -211,10 +258,10 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 										<span>John Dose</span>
 									</div>
 								</div>
-							</div>
+							</div>-->
 							<!-- END sched-content -->
 
-							<div class="schedule-content" data-day="monday">
+						<!--	<div class="schedule-content" data-day="monday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/fit-yoga.svg" alt="">
@@ -248,10 +295,10 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 									</div>
 								</div>
 
-							</div>
+							</div>-->
 							<!-- END sched-content -->
 
-							<div class="schedule-content" data-day="tuesday">
+						<!--	<div class="schedule-content" data-day="tuesday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/fit-dumbell.svg" alt="Cycling">
@@ -284,10 +331,10 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 										<span>John Dose</span>
 									</div>
 								</div>
-							</div>
+							</div>-->
 							<!-- END sched-content -->
 
-							<div class="schedule-content" data-day="wednesday">
+						<!--	<div class="schedule-content" data-day="wednesday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/fit-yoga.svg" alt="">
@@ -320,10 +367,10 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 										<span>Rita Doe</span>
 									</div>
 								</div>
-							</div>
+							</div>-->
 							<!-- END sched-content -->
 
-							<div class="schedule-content" data-day="thursday">
+						<!--	<div class="schedule-content" data-day="thursday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/fit-dumbell.svg" alt="Cycling">
@@ -356,10 +403,10 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 										<span>John Dose</span>
 									</div>
 								</div>
-							</div>
+							</div>-->
 							<!-- END sched-content -->
 
-							<div class="schedule-content" data-day="friday">
+							<!--<div class="schedule-content" data-day="friday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/fit-yoga.svg" alt="">
@@ -392,10 +439,10 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 										<span>Rita Doe</span>
 									</div>
 								</div>
-							</div>
+							</div>-->
 							<!-- END sched-content -->
 
-							<div class="schedule-content" data-day="saturday">
+						<!--	<div class="schedule-content" data-day="saturday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/fit-dumbell.svg" alt="Cycling">
@@ -428,16 +475,10 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 										<span>John Dose</span>
 									</div>
 								</div>
-							</div>
+							</div>-->
 							<!-- END sched-content -->
-						</div>
 
-
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="fh5co-parallax" style="background-image: url(images/home-image-3.jpg);" data-stellar-background-ratio="0.5">
+		<!--<div class="fh5co-parallax" style="background-image: url(images/home-image-3.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
@@ -449,66 +490,70 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 					</div>
 				</div>
 			</div>
-		</div><!-- end: fh5co-parallax -->
+		</div>--><!-- end: fh5co-parallax -->
 		<div id="fh5co-programs-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<div class="heading-section text-center animate-box">
-							<h2>Our Programs</h2>
-							<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+							<h2>Services</h2>
+							<p>We offer you a High Performance Digital and social Marketing.</p>
 						</div>
 					</div>
 				</div>
 				<div class="row text-center">
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
-							<img src="images/fit-dumbell.svg" alt="Cycling">
-							<h3>Body Combat</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+							<img src="images/digital-mkt.png" alt="Cycling">
+							<h3>Social Marketing</h3>
+							<p>We influence customers across Twitter, Facebook, Instagram and Snapchat using both paid advertising and organic content management. </p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
-							<img src="images/fit-yoga.svg" alt="">
-							<h3>Yoga Programs</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+							<img src="images/retargeting.png" alt="">
+							<h3>Retargeting</h3>
+							<p>Make sure all page hits are used in a way to build your brand. Follow your site visitors around the internet with custom messaging. </p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
-							<img src="images/fit-cycling.svg" alt="">
-							<h3>Cycling Program</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+							<img src="images/fb-mkt.svg" alt="">
+							<h3>Facebook Marketing</h3>
+							<p>Drive high quality leads and e-commerce sales with Facebook advertising. We build custom audiences and convert consumers using creative. </p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
-							<img src="images/fit-boxing.svg" alt="Cycling">
-							<h3>Boxing Fitness</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+
+							<img src="images/display.png" alt="">
+
+							<h3>Display</h3>
+							<p>Display marketing is a great channel to grow your online exposure and increase brand awareness by placing banner images/ videos/textual adverts/ onto relevant websites. </p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
-							<img src="images/fit-swimming.svg" alt="">
-							<h3>Swimming Program</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+							<img src="images/seo-icon.png" alt="">
+							<h3>Search Engine</h3>
+							<p>Drive sales on Google, Bing and Yahoo. Match your company advertising to the buying behaviour of consumers who are ready to purchase. </p>
+
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
-							<img src="images/fit-massage.svg" alt="">
-							<h3>Massage</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+							<img src="images/email-mkt.png" alt="">
+							<h3>Email marketing</h3>
+							<p>The average professional receives around 100 emails every day. To manage this high volume, people are moving through their inboxes quickly, looking needed info. </p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -517,8 +562,8 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<div class="heading-section text-center animate-box">
-							<h2>Meet Our Trainers</h2>
-							<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+							<h2>Why Us?</h2>
+							<p>We focus to help your businesses achieve online success</p>
 						</div>
 					</div>
 				</div>
@@ -527,14 +572,15 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 						<div class="team-section-grid animate-box" style="background-image: url(images/trainer-1.jpg);">
 							<div class="overlay-section">
 								<div class="desc">
-									<h3>John Doe</h3>
-									<span>Body Trainer</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-									<p class="fh5co-social-icons">
+									<h1 style="color:#fff">Performance Oriented</h1>
+									<!--<span>Body Trainer</span>-->
+									<p>We play to win. So if you're looking for an advertising agency that won't stop until you're in the lead, let's talk.</p>
+									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Contact Us</a></span>
+									<!--<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
 										<a href="#"><i class="icon-facebook-with-circle"></i></a>
 										<a href="#"><i class="icon-instagram-with-circle"></i></a>
-									</p>
+									</p>-->
 								</div>
 							</div>
 						</div>
@@ -543,14 +589,10 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 						<div class="team-section-grid animate-box" style="background-image: url(images/trainer-2.jpg);">
 							<div class="overlay-section">
 								<div class="desc">
-									<h3>James Smith</h3>
-									<span>Swimming Trainer</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-									<p class="fh5co-social-icons">
-										<a href="#"><i class="icon-twitter-with-circle"></i></a>
-										<a href="#"><i class="icon-facebook-with-circle"></i></a>
-										<a href="#"><i class="icon-instagram-with-circle"></i></a>
-									</p>
+									<h1 style="color:#fff">Case Studies</h1>
+									<!--<span>Swimming Trainer</span>-->
+									<p>We'll move mountains for you. But don't take our word for it, have a look through our case studies.</p>
+									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Know More</a></span>
 								</div>
 							</div>
 						</div>
@@ -559,19 +601,15 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 						<div class="team-section-grid animate-box" style="background-image: url(images/trainer-3.jpg);">
 							<div class="overlay-section">
 								<div class="desc">
-									<h3>John Doe</h3>
-									<span>Chief Executive Officer</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<p class="fh5co-social-icons">
-										<a href="#"><i class="icon-twitter-with-circle"></i></a>
-										<a href="#"><i class="icon-facebook-with-circle"></i></a>
-										<a href="#"><i class="icon-instagram-with-circle"></i></a>
-									</p>
+									<h1 style="color:#fff">Extraordinary Output</h1>
+								<!--	<span>Chief Executive Officer</span>-->
+									<p>Don't leave money on the table. Your budget can produce more results, and we'll show you how.</p>
+									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Get Best Quote</a></span>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6">
+					<!--<div class="col-md-4 col-sm-6">
 						<div class="team-section-grid animate-box" style="background-image: url(images/trainer-4.jpg);">
 							<div class="overlay-section">
 								<div class="desc">
@@ -618,27 +656,21 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 								</div>
 							</div>
 						</div>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</div>
-		<div class="fh5co-parallax" style="background-image: url(images/home-image-2.jpg);" data-stellar-background-ratio="0.5">
+		<div class="fh5co-parallax" style="background-image: url(images/home-image-3.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 fh5co-table">
-						<div class="fh5co-intro fh5co-table-cell box-area">
-							<div class="animate-box">
-								<h1>Fitness Classes this summer</h1>
-								<p>Pay now and get 25% Discount</p>
-								<a href="#" class="btn btn-primary">Become A Member</a>
-							</div>
-						</div>
+				<div class="client-msg-banner">
+					<div class="animate-box">
+						"NMF media has provided us with excellent planning and execution of our online advertising campaigns. If you are looking for high-impact results, I strongly recommend you work with them. Their skills and flexibility truly make them a great partner. - mr. john"
 					</div>
 				</div>
 			</div>
 		</div><!-- end: fh5co-parallax -->
-		<div id="fh5co-pricing-section" class="fh5co-pricing fh5co-lightgray-section">
+	<!--	<div id="fh5co-pricing-section" class="fh5co-pricing fh5co-lightgray-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
@@ -801,7 +833,7 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 		<!-- fh5co-blog-section -->
 		<footer>
 			<div id="footer">
@@ -817,8 +849,8 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 							<ul class="contact-info">
 								<li><i class="icon-map-marker"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
 								<li><i class="icon-phone"></i>+ 1235 2355 98</li>
-								<li><i class="icon-envelope"></i><a href="#">info@yoursite.com</a></li>
-								<li><i class="icon-globe2"></i><a href="#">www.yoursite.com</a></li>
+								<li><i class="icon-envelope"></i><a href="#">info@nmfmedia.com</a></li>
+								<li><i class="icon-globe2"></i><a href="#">www.nmfmedia.com</a></li>
 							</ul>
 						</div>
 						<div class="col-md-4 animate-box">
@@ -837,7 +869,7 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 									<textarea class="form-control" id="message" rows="7" placeholder="Message"></textarea>
 								</div>
 								<div class="form-group">
-									<input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="Send Message">
+									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Send a message</a></span>
 								</div>
 							</form>
 						</div>
@@ -851,7 +883,7 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 								<a href="#"><i class="icon-dribbble2"></i></a>
 								<a href="#"><i class="icon-youtube"></i></a>
 							</p>
-							<p>Copyright 2016 Free Html5 <a href="#">Fitness</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+							<p>Copyright &copy; 2016 NMF media. All Rights Reserved.</p>
 						</div>
 					</div>
 				</div>
@@ -861,7 +893,7 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 
 	</div>
 	<!-- END fh5co-page -->
-
+<a class="chat-btn"></a>
 	</div>
 	<!-- END fh5co-wrapper -->
 
@@ -883,6 +915,18 @@ observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });
 
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
+	<script>
+			$(window).scroll(function(){ var header = document.getElementById("fh5co-header-section");
+		var	logo_head =document.getElementById("logo_head");
+			  if ($(this).scrollTop() > 100){
+			    console.log("show background");header.style.backgroundColor="#e7ecec";
+					logo_head.src="images/logo-blk.png";
+			  }
+			  else{
+			     console.log("hide background");header.style.backgroundColor="transparent";
+					 logo_head.src="images/logo.png";
 
+			  }
+			});</script>
 	</body>
 </html>
