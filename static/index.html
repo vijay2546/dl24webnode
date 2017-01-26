@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Welcome	>>@NMF media</title>
+	<title>Welcome &mdash; @TellMobi</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="web development @NMF media" />
 	<meta name="keywords" content="web development, mobile web development" />
@@ -54,7 +54,22 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 <style>
+@-webkit-keyframes fade-in-img{
+    from{
+        opacity:1;
 
+    }
+    to{
+        opacity:0;
+
+    }
+}
+.image-animated-one{
+    display:inline;
+    position:relative;
+    -webkit-animation:fade-in-img-img 4s infinite;
+
+}
 @-webkit-keyframes fade-in{
     from{
         opacity:1;
@@ -89,6 +104,7 @@
 li button {
 	background-color:transparent;
 	color:#ccc;
+	border-style: solid;
 }
 li button:hover{
 	background-color:#2ce6e1;
@@ -106,7 +122,7 @@ z-index: 2;
 bottom: 20px;
 right: 0px;
 text-align: right;
-margin-right: 10px;
+margin-right: 20px;
 background-image: url(images/chat.png);
 width: 60px;
 height: 60px;
@@ -123,14 +139,13 @@ background-repeat: no-repeat;
 			<header id="fh5co-header-section">
 				<div class="container">
 					<div class="nav-header">
-						<a  href="index.html" style="    display: inline-block;" ><img id="logo_head" src="images/logo.png" alt="" class="img-responsive logo"></a>
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-
+<h1 id="fh5co-logo"><a id="logo-text" href="#">Tell<span>mobi</span></a></h1>
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li><a href="#">Contact</a></li>
-								<li><button id="btnHeader" style="padding:5px;border-radius:5px;">Get a Quote</button></li>
+								<li><button id="btnHeader" style="padding:5px;border-radius:5px;" data-toggle="modal" data-target="#myModal">Get a Quote</button></li>
 							</ul>
 						</nav>
 					</div>
@@ -142,11 +157,14 @@ background-repeat: no-repeat;
 
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover" id="cover" data-stellar-background-ratio="0.5" style="background-image: url(./images/home-image-1.jpg);">
+			<div class="fh5co-cover " id="cover" data-stellar-background-ratio="0.5" style="background-image: url(./images/home-image-1.jpg);">
 
 				<div id="sliderFrame">
 							 <div id="slider">
 									 <img src="images/image-slider-1.png"  />
+									 <img src="images/image-slider-2.png"  />
+									 <img src="images/image-slider-3.png"  />
+									 <img src="images/image-slider-4.png"  />
 							 </div>
 
 					 </div>
@@ -156,8 +174,8 @@ background-repeat: no-repeat;
 
 							<div class="col-md-6" id="main_text">
 								<h2 style="color:#c2c7c2"> High</h2> <div class="aggettivi">	<h2 class='text-animated-one' style="color:#2ce6e1" id="mainLbl"> <b>Impact</b></h2></div>
-								<p><span> It's time to go Social, We make it simple.</span></p>
-								<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Get a quote</a></span>
+								<p><span>Because your media matters.</span></p>
+								<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#" data-toggle="modal" data-target="#myModal">Get a quote</a></span>
 							</div>
 
 						</div>
@@ -167,7 +185,8 @@ background-repeat: no-repeat;
 				var text=["Impact", "Sales" , "Traffic" , "Revanue"];
 cnt=1;
 				var labelBig =document.getElementById("mainLbl");
-				setInterval(function(){labelBig.innerHTML="<b>"+text[cnt]+"</b>";cnt= cnt==3?0:cnt+1;},4000);
+				var cover =document.getElementById("cover");
+				setInterval(function(){labelBig.innerHTML="<b>"+text[cnt]+"</b>";cnt= cnt==3?0:cnt+1;},3000);
 				//var cover= document.getElementById("cover");
 
 				</script>
@@ -497,46 +516,46 @@ cnt=1;
 					<div class="col-md-8 col-md-offset-2">
 						<div class="heading-section text-center animate-box">
 							<h2>Services</h2>
-							<p>We offer you a High Performance Digital and social Marketing.</p>
+							<p>Our goal is to work from the ground up with your digital presence.</p>
 						</div>
 					</div>
 				</div>
 				<div class="row text-center">
-					<div class="col-md-4 col-sm-6">
+					<div class="col-md-6 col-sm-12 col-lg-6">
 						<div class="program animate-box">
-							<img src="images/digital-mkt.png" alt="Cycling">
-							<h3>Social Marketing</h3>
-							<p>We influence customers across Twitter, Facebook, Instagram and Snapchat using both paid advertising and organic content management. </p>
-							<span><a href="#" class="btn btn-default">Join Now</a></span>
+							<img src="images/web-dev.png" alt="Cycling">
+							<h3>Web Development</h3>
+							<p>We are leading brand name in website development for quite sometime now. We have immense knowledge and experience in website development. </p>
+							<span><a href="web-development.html" class="btn btn-default">Know More</a></span>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6">
+					<div class="col-md-6 col-sm-12 col-lg-6">
 						<div class="program animate-box">
-							<img src="images/retargeting.png" alt="">
-							<h3>Retargeting</h3>
-							<p>Make sure all page hits are used in a way to build your brand. Follow your site visitors around the internet with custom messaging. </p>
-							<span><a href="#" class="btn btn-default">Join Now</a></span>
+							<img src="images/mobile-development.png" alt="">
+							<h3>Mobile Development</h3>
+							<p>Specialize in developing mobile applications. Our aim is to understand your ideas and needs and convert them to highly efficient applications. </p>
+							<span><a href="mobile-development.html" class="btn btn-default">Know More</a></span>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6">
+					<div class="col-md-6 col-sm-12 col-lg-6">
 						<div class="program animate-box">
-							<img src="images/fb-mkt.svg" alt="">
-							<h3>Facebook Marketing</h3>
+							<img src="images/digital-markt.png" alt="">
+							<h3>Digital Marketing</h3>
 							<p>Drive high quality leads and e-commerce sales with Facebook advertising. We build custom audiences and convert consumers using creative. </p>
-							<span><a href="#" class="btn btn-default">Join Now</a></span>
+							<span><a href="digital-marketing.html" class="btn btn-default">Know More</a></span>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6">
+					<div class="col-md-6 col-sm-12 col-lg-6">
 						<div class="program animate-box">
 
-							<img src="images/display.png" alt="">
+							<img src="images/fb-mkt.svg" alt="">
 
-							<h3>Display</h3>
-							<p>Display marketing is a great channel to grow your online exposure and increase brand awareness by placing banner images/ videos/textual adverts/ onto relevant websites. </p>
-							<span><a href="#" class="btn btn-default">Join Now</a></span>
+							<h3>Social Media Management</h3>
+							<p>We influence customers across Twitter, Facebook, Instagram and Snapchat using both paid advertising and organic content management. </p>
+							<span><a href="digital-marketing.html" class="btn btn-default">Know More</a></span>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6">
+					<!--<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
 							<img src="images/seo-icon.png" alt="">
 							<h3>Search Engine</h3>
@@ -552,7 +571,7 @@ cnt=1;
 							<p>The average professional receives around 100 emails every day. To manage this high volume, people are moving through their inboxes quickly, looking needed info. </p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
-					</div>
+					</div>-->
 
 				</div>
 			</div>
@@ -563,7 +582,7 @@ cnt=1;
 					<div class="col-md-8 col-md-offset-2">
 						<div class="heading-section text-center animate-box">
 							<h2>Why Us?</h2>
-							<p>We focus to help your businesses achieve online success</p>
+							<p>We ensure our clients goals are met</p>
 						</div>
 					</div>
 				</div>
@@ -574,8 +593,8 @@ cnt=1;
 								<div class="desc">
 									<h1 style="color:#fff">Performance Oriented</h1>
 									<!--<span>Body Trainer</span>-->
-									<p>We play to win. So if you're looking for an advertising agency that won't stop until you're in the lead, let's talk.</p>
-									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Contact Us</a></span>
+									<p>We want you to win in your area. So, our preference is always deliver best performance.</p>
+									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#" data-toggle="modal" data-target="#myModal">Contact Us</a></span>
 									<!--<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
 										<a href="#"><i class="icon-facebook-with-circle"></i></a>
@@ -589,10 +608,10 @@ cnt=1;
 						<div class="team-section-grid animate-box" style="background-image: url(images/trainer-2.jpg);">
 							<div class="overlay-section">
 								<div class="desc">
-									<h1 style="color:#fff">Case Studies</h1>
+									<h1 style="color:#fff">Highly Experieced</h1>
 									<!--<span>Swimming Trainer</span>-->
-									<p>We'll move mountains for you. But don't take our word for it, have a look through our case studies.</p>
-									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Know More</a></span>
+									<p>Our team is highly experienced in our field. Highly educated and delivered many successful targets.</p>
+									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#" data-toggle="modal" data-target="#myModal">Know More</a></span>
 								</div>
 							</div>
 						</div>
@@ -604,7 +623,7 @@ cnt=1;
 									<h1 style="color:#fff">Extraordinary Output</h1>
 								<!--	<span>Chief Executive Officer</span>-->
 									<p>Don't leave money on the table. Your budget can produce more results, and we'll show you how.</p>
-									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Get Best Quote</a></span>
+									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#" data-toggle="modal" data-target="#myModal">Get Best Quote</a></span>
 								</div>
 							</div>
 						</div>
@@ -665,7 +684,7 @@ cnt=1;
 			<div class="container">
 				<div class="client-msg-banner">
 					<div class="animate-box">
-						"NMF media has provided us with excellent planning and execution of our online advertising campaigns. If you are looking for high-impact results, I strongly recommend you work with them. Their skills and flexibility truly make them a great partner. - mr. john"
+						"TellMobi has provided us with excellent planning and execution of our online advertising campaigns. If you are looking for high-impact results, I strongly recommend you work with them. Their skills and flexibility truly make them a great partner. - mr. john"
 					</div>
 				</div>
 			</div>
@@ -838,22 +857,23 @@ cnt=1;
 		<footer>
 			<div id="footer">
 				<div class="container">
-					<div class="row">
-						<div class="col-md-4 animate-box">
+					<div >
+						<!--<div class="col-md-4 animate-box">
 							<h3 class="section-title">About Us</h3>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
-						</div>
+						</div>-->
 
 						<div class="col-md-4 animate-box">
-							<h3 class="section-title">Our Address</h3>
+							<h5 class="section-title">Address</h5>
 							<ul class="contact-info">
 								<li><i class="icon-map-marker"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
 								<li><i class="icon-phone"></i>+ 1235 2355 98</li>
-								<li><i class="icon-envelope"></i><a href="#">info@nmfmedia.com</a></li>
-								<li><i class="icon-globe2"></i><a href="#">www.nmfmedia.com</a></li>
+								<li><i class="icon-envelope"></i><a href="#">info@tellmobi.com</a></li>
+								<li><i class="icon-globe2"></i><a href="#">www.tellmobi.com</a></li>
 							</ul>
+							<p style="font-size:1em">Copyright &copy; 2017 TellMobi. All Rights Reserved.</p>
 						</div>
-						<div class="col-md-4 animate-box">
+						<!--<div class="col-md-4 animate-box">
 							<h3 class="section-title">Drop us a line</h3>
 							<form class="contact-form">
 								<div class="form-group">
@@ -872,9 +892,11 @@ cnt=1;
 									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Send a message</a></span>
 								</div>
 							</form>
-						</div>
+
+						</div>-->
+
 					</div>
-					<div class="row copy-right">
+					<!--<div >
 						<div class="col-md-6 col-md-offset-3 text-center">
 							<p class="fh5co-social-icons">
 								<a href="#"><i class="icon-twitter2"></i></a>
@@ -883,9 +905,9 @@ cnt=1;
 								<a href="#"><i class="icon-dribbble2"></i></a>
 								<a href="#"><i class="icon-youtube"></i></a>
 							</p>
-							<p>Copyright &copy; 2016 NMF media. All Rights Reserved.</p>
+
 						</div>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</footer>
@@ -894,6 +916,59 @@ cnt=1;
 	</div>
 	<!-- END fh5co-page -->
 <a class="chat-btn"></a>
+<!-- modal popup-->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" style="margin-top:80px;" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button"  class="close" data-dismiss="modal" aria-label="Close" >X</button>
+        <h4 class="modal-title" id="myModalLabel">We assure you BEST QUOTE !</h4>
+      </div>
+      <div class="modal-body">
+				<form class="contact-form">
+					<div class="form-group">
+						<label for="service" class="sr-only">Request Type</label>
+						<select type="select" class="form-control" id="request_for" >
+							<option value="0" default>Select Request type</option>
+
+<option value="Web Development">Web Development</option>
+<option value="Mobile Development">Mobile Development</option>
+<option value="Digital Marketing">Digital Marketing</option>
+<option value="Social Media Management">Social Media Management</option>
+
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="name" class="sr-only">Name</label>
+						<input type="name" class="form-control" id="name" placeholder="Name">
+					</div>
+					<div class="form-group">
+						<label for="email" class="sr-only">Email</label>
+						<input type="email" class="form-control" id="email" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<label for="message" class="sr-only">Message</label>
+						<textarea class="form-control" id="message" rows="4" placeholder="Message"></textarea>
+					</div>
+
+					<div class="modal-footer">
+
+						<div class="form-group">
+							<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Send your request</a></span>
+						</div>
+		      </div>
+
+
+				</form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- end modal-->
+
 	</div>
 	<!-- END fh5co-wrapper -->
 
@@ -917,14 +992,15 @@ cnt=1;
 	<script src="js/main.js"></script>
 	<script>
 			$(window).scroll(function(){ var header = document.getElementById("fh5co-header-section");
-		var	logo_head =document.getElementById("logo_head");
+		var	logo_head =document.getElementById("logo-text");
 			  if ($(this).scrollTop() > 100){
-			    console.log("show background");header.style.backgroundColor="#e7ecec";
-					logo_head.src="images/logo-blk.png";
+			    console.log("show background");
+					header.style.backgroundColor="#e7ecec";
+					logo_head.style.color="#686d6d";
 			  }
 			  else{
 			     console.log("hide background");header.style.backgroundColor="transparent";
-					 logo_head.src="images/logo.png";
+					 logo_head.style.color="#fff";
 
 			  }
 			});</script>
