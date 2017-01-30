@@ -53,10 +53,12 @@ li button {
 	background-color:transparent;
 	color:#ccc;
 	border-style: solid;
+	margin: 0px 2.0em !important;
 }
 li button:hover{
 	background-color:#2ce6e1;
 	color:#5d5858;
+	margin: 0px 2.0em !important;
 }
 .header-subtext{
 	color:#ccc!important;
@@ -90,7 +92,8 @@ background-repeat: no-repeat;
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
-								<li><a href="#">Contact</a></li>
+								<li><a  onclick="gotoContact()" href="#">Contact</a></li>
+								<li><a onclick="gotoAbout()" href="#">About Us</a></li>
 								<li><button id="btnHeader" style="padding:5px;border-radius:5px;" data-toggle="modal" data-target="#myModal">Get a Quote</button></li>
 							</ul>
 						</nav>
@@ -164,11 +167,15 @@ background-repeat: no-repeat;
 						<div class="col-md-4 animate-box">
 							<h5 class="section-title">Address</h5>
 							<ul class="contact-info">
-								<li><i class="icon-map-marker"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
-								<li><i class="icon-phone"></i>+ 1235 2355 98</li>
+								<li><i class="icon-map-marker"></i>704 - 288 Eltham Road, Victoria BC, V9V 1J9</li>
+								<li><i class="icon-phone"></i>+ 1 - 250 - 889 - 3893</li>
 								<li><i class="icon-envelope"></i><a href="#">info@tellmobi.com</a></li>
 								<li><i class="icon-globe2"></i><a href="#">www.tellmobi.com</a></li>
 							</ul>
+
+						</div>
+						<div class="col-md-4 animate-box">
+							
 
 						</div>
 						<div class="col-md-4 animate-box">
@@ -190,9 +197,9 @@ background-repeat: no-repeat;
 									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Send a message</a></span>
 								</div>
 							</form>
-<p style="font-size:0.7em;">Copyright &copy; 2017 TellMobi. All Rights Reserved.</p>
-						</div>
 
+						</div>
+<p style="font-size:0.7em;">Copyright &copy; 2017 TellMobi. All Rights Reserved.</p>
 					</div>
 					<!--<div >
 						<div class="col-md-6 col-md-offset-3 text-center">
@@ -302,6 +309,12 @@ background-repeat: no-repeat;
 					 logo_head.style.color="#fff";
 
 				}
-			});</script>
+			});
+			
+			function gotoContact(){
+			event.preventDefault();
+			window.scrollTo(0,document.body.scrollHeight);
+			return false;
+			}</script>
 	</body>
 </html>

@@ -105,10 +105,12 @@ li button {
 	background-color:transparent;
 	color:#ccc;
 	border-style: solid;
+	margin: 0px 2.0em !important;
 }
 li button:hover{
 	background-color:#2ce6e1;
 	color:#5d5858;
+	margin: 0px 2.0em !important;
 }
 .client-msg-banner{
 	padding: 7% 10%;
@@ -150,8 +152,9 @@ p{
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
-								<li><a href="#">Contact</a></li>
-								<li><button id="btnHeader" style="padding:5px;border-radius:5px;" data-toggle="modal" data-target="#myModal">Get a Quote</button></li>
+								<li><a onclick="gotoContact()" href="#">Contact</a></li>
+								<li><a onclick="gotoAbout()" href="#">About Us</a></li>
+								<li><button id="btnHeader" style="padding:3px 10px;border-radius:5px;" data-toggle="modal" data-target="#myModal">Get a Quote</button></li>
 							</ul>
 						</nav>
 					</div>
@@ -181,7 +184,7 @@ p{
 							<div class="col-md-6" id="main_text">
 								<h2 style="color:#c2c7c2"> Because your</h2> <div class="aggettivi">	<h2 class='text-animated-one' style="color:#fff" id="mainLbl"> <b> Media matters</b></h2></div>
 								<!--<p><span>Because your media matters</span></p>-->
-								<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#" data-toggle="modal" data-target="#myModal">Get a quote</a></span>
+								<!--<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#" data-toggle="modal" data-target="#myModal">Get a quote</a></span>-->
 							</div>
 
 						</div>
@@ -218,7 +221,7 @@ cnt=1;
 // window.onload=setTimeout(function(){var target = document.getElementsByClassName('bgLayer');
 // observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });},2000);
 
-
+*/
 </script>
 
 			</div>
@@ -521,7 +524,7 @@ cnt=1;
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<div class="heading-section text-center animate-box">
-							<h2>Services</h2>
+							<h2>What We Do</h2>
 							<p>Our goal is to work from the ground up with your digital presence.</p>
 						</div>
 					</div>
@@ -531,8 +534,8 @@ cnt=1;
 						<div class="program animate-box">
 							<img src="images/web-dev.png" alt="Cycling">
 							<h3>Web Development</h3>
-							<p>We are leading brand name in website development for quite sometime now. We have knowledge and experience in website development. </p>
-							<span><a href="web-development.html" class="btn btn-default">Know More</a></span>
+							<p>We are leading brand name in website development now. We have knowledge and experience in website development. </p>
+							<span><a href="web-development.html" class="btn btn-default">Learn More</a></span>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-12 col-lg-6">
@@ -540,7 +543,7 @@ cnt=1;
 							<img src="images/mobile-development.png" alt="">
 							<h3>Mobile Development</h3>
 							<p>Specialize in developing mobile applications. Our aim is to understand your ideas and needs and convert them to highly efficient applications. </p>
-							<span><a href="mobile-development.html" class="btn btn-default">Know More</a></span>
+							<span><a href="mobile-development.html" class="btn btn-default">Learn More</a></span>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-12 col-lg-6">
@@ -548,7 +551,7 @@ cnt=1;
 							<img src="images/digital-markt.png" alt="">
 							<h3>Digital Marketing</h3>
 							<p>Drive high quality leads and e-commerce sales with Facebook advertising. We build custom audiences and convert consumers using creative. </p>
-							<span><a href="digital-marketing.html" class="btn btn-default">Know More</a></span>
+							<span><a href="digital-marketing.html" class="btn btn-default">Learn More</a></span>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-12 col-lg-6">
@@ -558,7 +561,7 @@ cnt=1;
 
 							<h3>Social Media Management</h3>
 							<p>We influence customers across Twitter, Facebook, Instagram and Snapchat using both paid advertising and organic content management. </p>
-							<span><a href="digital-marketing.html" class="btn btn-default">Know More</a></span>
+							<span><a href="digital-marketing.html" class="btn btn-default">Learn More</a></span>
 						</div>
 					</div>
 					<!--<div class="col-md-4 col-sm-6">
@@ -587,8 +590,8 @@ cnt=1;
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<div class="heading-section text-center animate-box">
-							<h2>Why Us?</h2>
-							<p>We ensure our clients goals are met</p>
+							<h2>About Us</h2>
+							<p>We ensure our clients goals are met from the ground up</p>
 						</div>
 					</div>
 				</div>
@@ -600,7 +603,7 @@ cnt=1;
 									<h1 style="color:#fff">Performance Oriented</h1>
 									<!--<span>Body Trainer</span>-->
 									<p>We want you to win in your area. So, our preference is always deliver best performance.</p>
-									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#" data-toggle="modal" data-target="#myModal">Contact Us</a></span>
+									<!--<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#" data-toggle="modal" data-target="#myModal">Contact Us</a></span>-->
 									<!--<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
 										<a href="#"><i class="icon-facebook-with-circle"></i></a>
@@ -617,7 +620,7 @@ cnt=1;
 									<h1 style="color:#fff">Highly Experieced</h1>
 									<!--<span>Swimming Trainer</span>-->
 									<p>Our team is highly experienced in our field. Highly educated and delivered many successful targets.</p>
-									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#" data-toggle="modal" data-target="#myModal">Know More</a></span>
+									<!--<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#" data-toggle="modal" data-target="#myModal">Know More</a></span>-->
 								</div>
 							</div>
 						</div>
@@ -629,7 +632,7 @@ cnt=1;
 									<h1 style="color:#fff">Extraordinary Output</h1>
 								<!--	<span>Chief Executive Officer</span>-->
 									<p>Don't leave money on the table. Your budget can produce more results, and we'll show you how.</p>
-									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#" data-toggle="modal" data-target="#myModal">Get Best Quote</a></span>
+									<!--<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#" data-toggle="modal" data-target="#myModal">Get Best Quote</a></span>-->
 								</div>
 							</div>
 						</div>
@@ -685,7 +688,7 @@ cnt=1;
 				</div>
 			</div>
 		</div>
-		<div class="fh5co-parallax" style="background-image: url(images/back-likes.png);" data-stellar-background-ratio="0.5">
+		<!--<div class="fh5co-parallax" style="background-image: url(images/back-likes.png);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="client-msg-banner">
@@ -693,7 +696,7 @@ cnt=1;
 						"TellMobi has provided us with excellent planning and execution of our online advertising campaigns. If you are looking for high-impact results, I strongly recommend you work with them. Their skills and flexibility truly make them a great partner. - mr. john"
 					</div>
 				</div>
-			</div>
+			</div>-->
 		</div><!-- end: fh5co-parallax -->
 	<!--	<div id="fh5co-pricing-section" class="fh5co-pricing fh5co-lightgray-section">
 			<div class="container">
@@ -872,11 +875,15 @@ cnt=1;
 						<div class="col-md-4 animate-box">
 							<h5 class="section-title">Address</h5>
 							<ul class="contact-info">
-								<li><i class="icon-map-marker"></i>198 West 21th Street, Suite 721 New York NY 10016</li>
-								<li><i class="icon-phone"></i>+ 1235 2355 98</li>
+								<li><i class="icon-map-marker"></i>704 - 288 Eltham Road, Victoria BC, V9V 1J9</li>
+								<li><i class="icon-phone"></i>+ 1 - 250 - 889 - 3893</li>
 								<li><i class="icon-envelope"></i><a href="#">info@tellmobi.com</a></li>
 								<li><i class="icon-globe2"></i><a href="#">www.tellmobi.com</a></li>
 							</ul>
+
+						</div>
+						<div class="col-md-4 animate-box">
+							
 
 						</div>
 						<div class="col-md-4 animate-box">
@@ -898,9 +905,9 @@ cnt=1;
 									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Send a message</a></span>
 								</div>
 							</form>
-<p style="font-size:0.7em;">Copyright &copy; 2017 TellMobi. All Rights Reserved.</p>
-						</div>
 
+						</div>
+<p style="font-size:0.7em;">Copyright &copy; 2017 TellMobi. All Rights Reserved.</p>
 					</div>
 					<!--<div >
 						<div class="col-md-6 col-md-offset-3 text-center">
@@ -1012,6 +1019,13 @@ cnt=1;
 					 logo_head.style.color="#fff";
 
 			  }
-			});</script>
+			});
+			
+			function gotoContact(){
+			event.preventDefault();
+			window.scrollTo(0,document.body.scrollHeight);
+			return false;
+			}
+			</script>
 	</body>
 </html>
