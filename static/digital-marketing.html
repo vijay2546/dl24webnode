@@ -94,7 +94,7 @@ background-repeat: no-repeat;
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li><a onclick="gotoContact()" href="#">Contact</a></li>
-								<li><a  onclick="gotoAbout()" href="#">About Us</a></li>
+								<!--<li><a  onclick="gotoAbout()" href="#">About Us</a></li>-->
 								<li><button id="btnHeader" style="padding:5px;border-radius:5px;" data-toggle="modal" data-target="#myModal">Get a Quote</button></li>
 							</ul>
 						</nav>
@@ -225,7 +225,7 @@ background-repeat: no-repeat;
 
 	</div>
 	<!-- END fh5co-page -->
-<a class="chat-btn"></a>
+<!--<a class="chat-btn"></a>-->
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" style="margin-top:80px;" role="document">
@@ -315,8 +315,26 @@ background-repeat: no-repeat;
 			
 			function gotoContact(){
 			event.preventDefault();
-			window.scrollTo(0,document.body.scrollHeight);
+			var container = $('body'),
+    scrollTo = $('#footer');
+
+container.animate({
+    scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+});
 			return false;
-			}</script>
+			}
+			
+			</script>
+			<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5890685870e5360a6a16b800/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
 	</body>
 </html>

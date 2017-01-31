@@ -140,6 +140,7 @@ p{
 </style>
 
 	</head>
+	
 	<body>
 		<div id="fh5co-wrapper">
 		<div id="fh5co-page">
@@ -195,11 +196,10 @@ p{
 cnt=1;
 				var labelBig =document.getElementById("mainLbl");
 				var cover =document.getElementById("cover");
-				setInterval(function(){labelBig.innerHTML="<b>"+text[cnt]+"</b>";cnt= cnt==3?0:cnt+1;},3000);
+				setInterval(function(){labelBig.innerHTML="<b>"+text[cnt]+"</b>";cnt= cnt==3?0:cnt+1;},3000);*/
 				//var cover= document.getElementById("cover");
 
-				</script>
-<script>
+		
 //var labelBig= document.getElementById("labelBig");
 
 //setTimeout(function(){labelBig.className="fadeAndScale";},2000);
@@ -221,7 +221,7 @@ cnt=1;
 // window.onload=setTimeout(function(){var target = document.getElementsByClassName('bgLayer');
 // observer.observe(target[0], { attributes : true, attributeFilter : ['style'] });},2000);
 
-*/
+
 </script>
 
 			</div>
@@ -902,7 +902,7 @@ cnt=1;
 									<textarea class="form-control" id="message" rows="5" placeholder="Message"></textarea>
 								</div>
 								<div class="form-group">
-									<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Send a message</a></span>
+									<button type="submit" class="btn" style="background-color:#2ce6e1;color:#6c6f6c" >Send a message</button>
 								</div>
 							</form>
 
@@ -931,7 +931,7 @@ cnt=1;
 
 	</div>
 	<!-- END fh5co-page -->
-<a class="chat-btn"></a>
+<!--<a class="chat-btn"></a>-->
 <!-- modal popup-->
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -942,7 +942,7 @@ cnt=1;
         <h4 class="modal-title" id="myModalLabel">We assure you BEST QUOTE !</h4>
       </div>
       <div class="modal-body">
-				<form class="contact-form">
+				<form class="contact-form" action="mailagent.php" method="post">
 					<div class="form-group">
 						<label for="service" class="sr-only">Request Type</label>
 						<select type="select" class="form-control" id="request_for" >
@@ -971,7 +971,7 @@ cnt=1;
 					<div class="modal-footer">
 
 						<div class="form-group">
-							<span><a class="btn" style="background-color:#2ce6e1;color:#6c6f6c" href="#">Send your request</a></span>
+							<button type="submit" class="btn" style="background-color:#2ce6e1;color:#6c6f6c" >Send a message</button>
 						</div>
 		      </div>
 
@@ -1023,9 +1023,37 @@ cnt=1;
 			
 			function gotoContact(){
 			event.preventDefault();
-			window.scrollTo(0,document.body.scrollHeight);
+			var container = $('body'),
+    scrollTo = $('#footer');
+
+container.animate({
+    scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+});
+			return false;
+			}
+			function gotoAbout(){
+			event.preventDefault();
+			var container = $('body'),
+    scrollTo = $('#fh5co-team-section');
+
+container.animate({
+    scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+});
 			return false;
 			}
 			</script>
+			<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5890685870e5360a6a16b800/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 	</body>
 </html>
