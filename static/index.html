@@ -172,9 +172,9 @@ p{
 				<div id="sliderFrame">
 							 <div id="slider">
 									 <img src="images/image-slider-1.png"  />
-									 <img src="images/image-slider-2.png"  />
+									 <!--<img src="images/image-slider-2.png"  />
 									 <img src="images/image-slider-3.png"  />
-									 <img src="images/image-slider-4.png"  />
+									 <img src="images/image-slider-4.png"  />-->
 							 </div>
 
 					 </div>
@@ -889,17 +889,17 @@ cnt=1;
 						<div class="col-md-4 animate-box">
 							<h5 class="section-title">Drop us a line</h5>
 							<form class="contact-form">
-								<div class="form-group">
-									<label for="name" class="sr-only">Name</label>
-									<input type="name" class="form-control" id="name" placeholder="Name">
+								<div class="form-group" action="mailagent.php" method="post">
+									<label for="subject" class="sr-only">Name</label>
+									<input type="name" name="subject" class="form-control" id="name" placeholder="Name">
 								</div>
 								<div class="form-group">
 									<label for="email" class="sr-only">Email</label>
-									<input type="email" class="form-control" id="email" placeholder="Email">
+									<input type="email" name="email" class="form-control" id="email" placeholder="Email">
 								</div>
 								<div class="form-group">
 									<label for="message" class="sr-only">Message</label>
-									<textarea class="form-control" id="message" rows="5" placeholder="Message"></textarea>
+									<textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"></textarea>
 								</div>
 								<div class="form-group">
 									<button type="submit" class="btn" style="background-color:#2ce6e1;color:#6c6f6c" >Send a message</button>
@@ -944,8 +944,8 @@ cnt=1;
       <div class="modal-body">
 				<form class="contact-form" action="mailagent.php" method="post">
 					<div class="form-group">
-						<label for="service" class="sr-only">Request Type</label>
-						<select type="select" class="form-control" id="request_for" >
+						<label for="subject" class="sr-only">Request Type</label>
+						<select type="select" name="subject" id="subject" class="form-control" id="request_for" >
 							<option value="0" default>Select Request type</option>
 
 <option value="Web Development">Web Development</option>
@@ -956,22 +956,22 @@ cnt=1;
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="name" class="sr-only">Name</label>
-						<input type="name" class="form-control" id="name" placeholder="Name">
+						<label for="fname" class="sr-only">Name</label>
+						<input type="input" name="fname" class="form-control" id="fname" placeholder="Name">
 					</div>
 					<div class="form-group">
 						<label for="email" class="sr-only">Email</label>
-						<input type="email" class="form-control" id="email" placeholder="Email">
+						<input type="email" name="email" class="form-control" id="email" placeholder="Email">
 					</div>
 					<div class="form-group">
 						<label for="message" class="sr-only">Message</label>
-						<textarea class="form-control" id="message" rows="4" placeholder="Message"></textarea>
+						<textarea class="form-control" name="message" id="message" rows="4" placeholder="Message"></textarea>
 					</div>
 
 					<div class="modal-footer">
 
 						<div class="form-group">
-							<button type="submit" class="btn" style="background-color:#2ce6e1;color:#6c6f6c" >Send a message</button>
+							<input type="submit" class="btn" name="submit"  style="background-color:#2ce6e1;color:#6c6f6c" value="Send a message" >
 						</div>
 		      </div>
 
@@ -1041,19 +1041,22 @@ container.animate({
 });
 			return false;
 			}
+			
+			
+			//send message to admin
+			function sendEmail(){
+			$.ajax({
+  type: "POST",
+  url: "/mailagent.php",
+  data: {name:"vijay",email:"mailat365@gmail.com"},
+  success: function(){
+  console.log("success done");
+  },
+  dataType: json
+});
+			
+			}
 			</script>
-			<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5890685870e5360a6a16b800/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+			
 	</body>
 </html>

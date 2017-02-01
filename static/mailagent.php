@@ -1,13 +1,34 @@
 <?php
-	 //Email information
-  $admin_email = "vijay2546@gmail.com";
-  $email = "mailat365@gmail.com";
-  $subject = "need support tell mobi";
-  $comment = "to develop website";
-  
-  //send email
-  mail($admin_email, $subject, $comment, "From:mailat365@gmail.com");
-  header('Location: http://localhost/static/index.html');
-  //Email response
- // echo "Thank you for contacting us!";
+if(isset($_POST["submit"])){
+	echo "Fill All Fields..";
+//Checking for blank Fields..
+
+
+
+ $subject =isset($_POST["submit"])? 'New Request: ' . $_POST['subject'] : "New Request!!";
+echo $subject;
+ $message =isset($_POST["message"])? $_POST['message']: "No message";
+
+ $email_from =$_POST['email'];
+ $headers = 'From:'. $email_from ;
+
+ // message lines should not exceed 70 characters (PHP rule), so wrap it
+ $message = wordwrap($message, 70);
+echo $email_from ;
+echo $message ;
+ // Send mail by PHP Mail Function
+ mail("mailat365@gmail.com", $subject, $message, $headers);
+ //
+ echo '<script language="javascript">alert("Your request has been sent successfully!! Thank you for your interest with us!")</script>';
+ sleep(2);
+ header('Location: index.html');
+    
+ //exit();
+	// They clicked Yes
+
+ 
+ 
+ }
+
+
 ?>
