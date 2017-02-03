@@ -1,6 +1,6 @@
 {
   "name": "node-js-sample",
-  "version": "4.9.0",
+  "version": "5.2.0",
   "description": "A sample Node.js app using Express 4",
   "main": "app.js",
   "scripts": {
