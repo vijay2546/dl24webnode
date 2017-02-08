@@ -140,7 +140,7 @@ p{
 </style>
 
 	</head>
-	
+
 	<body>
 		<div id="fh5co-wrapper">
 		<div id="fh5co-page">
@@ -164,20 +164,41 @@ p{
 		</div>
 
 		<!-- end:fh5co-header -->
+<style>
+.fh5co-cover {
+  position: relative;
 
+  margin: 0 auto;
+
+}
+.fh5co-cover video {
+  width: 100%;
+  display: block;
+}
+.fh5co-cover:before {
+  content: '';
+  position: absolute;
+  background: #ccc;
+	opacity: 0.6;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+</style>
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover " id="cover" data-stellar-background-ratio="0.5" style="background-image: url(./images/home-image-1.jpg);">
-
-				<div id="sliderFrame">
+			<div class="fh5co-cover " id="cover" data-stellar-background-ratio="0.5" >
+<video src="background.mp4" style="width:100%;height:auto;" autoplay loop muted></video>
+				<!--<div id="sliderFrame">
 							 <div id="slider">
 									 <img src="images/image-slider-1.png"  />
 									 <!--<img src="images/image-slider-2.png"  />
 									 <img src="images/image-slider-3.png"  />
-									 <img src="images/image-slider-4.png"  />-->
+									 <img src="images/image-slider-4.png"  />
 							 </div>
 
-					 </div>
+					 </div>-->
 				<div class="desc animate-box">
 					<div class="container">
 						<div class="row">
@@ -199,7 +220,7 @@ cnt=1;
 				setInterval(function(){labelBig.innerHTML="<b>"+text[cnt]+"</b>";cnt= cnt==3?0:cnt+1;},3000);*/
 				//var cover= document.getElementById("cover");
 
-		
+
 //var labelBig= document.getElementById("labelBig");
 
 //setTimeout(function(){labelBig.className="fadeAndScale";},2000);
@@ -883,7 +904,7 @@ cnt=1;
 
 						</div>
 						<div class="col-md-4 animate-box">
-							
+
 
 						</div>
 						<div class="col-md-4 animate-box">
@@ -1020,7 +1041,7 @@ cnt=1;
 
 			  }
 			});
-			
+
 			function gotoContact(){
 			event.preventDefault();
 			var container = $('body'),
@@ -1041,8 +1062,8 @@ container.animate({
 });
 			return false;
 			}
-			
-			
+
+
 			//send message to admin
 			function sendEmail(){
 			$.ajax({
@@ -1054,9 +1075,9 @@ container.animate({
   },
   dataType: json
 });
-			
+
 			}
 			</script>
-			
+
 	</body>
 </html>
