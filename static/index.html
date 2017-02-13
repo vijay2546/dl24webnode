@@ -140,6 +140,22 @@ p{
 .modal-header{
 	background: #2ce6e1;
 }
+#secondPage{
+	top: -242px;
+position: absolute;
+}
+#text-center-main{
+
+font-size:4em;
+color:#fff;
+-webkit-user-select: all;  /* Chrome 49+ */
+ -moz-user-select: all;     /* Firefox 43+ */
+ -ms-user-select: all;      /* No support yet */
+ user-select: all;
+}
+#subtitle{
+	font-size:2em;
+}
 </style>
 
 	</head>
@@ -152,7 +168,7 @@ p{
 				<div class="container">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-<h1 id="fh5co-logo"><a id="logo-text" href="#">Tell<span>mobi</span></a></h1>
+<h1 id="fh5co-logo"><a id="logo-text" href="#" onclick="managePages('home');">Tell<span>mobi</span></a></h1>
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
@@ -181,8 +197,8 @@ p{
 							 </div>
 
 					 </div>
-				<div class="desc animate-box">
-					<div class="container">
+				<div class="desc animate-box" >
+					<div class="container" id="firstPage">
 						<div class="row">
 
 							<div class="col-md-6" id="main_text">
@@ -193,7 +209,21 @@ p{
 
 						</div>
 					</div>
+
+					<div class="container" id="secondPage" style="display:none">
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+								<div class="fh5co-intro fh5co-table-cell animate-box">
+									<h1 class="text-center" id="text-center-main">Digital Marketing</h1>
+									<p class="header-subtext" id="subtitle">Let's go together in digital world </a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
+
+
 				<script>
 			/*var text=["Impact", "Sales" , "Traffic" , "Revanue"];
 cnt=1;
@@ -523,7 +553,126 @@ cnt=1;
 			</div>
 		</div>--><!-- end: fh5co-parallax -->
 		<div id="fh5co-programs-section">
-			<div class="container">
+
+			<div class="container" id="digiPage" style="display:none">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="heading-section text-center animate-box">
+							<h2>Digital Marketing</h2>
+							<!--<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>-->
+						</div>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-md-12 col-sm-12">
+						<div class="item-detail animate-box">
+							<img src="images/seo-banner.jpg" alt="">
+							<h3>Search Engine Optimization (SEO)</h3>
+							<p>Just by making a website built doesnt help you get visitors. We let you at top of search engines, be Seen by Customers When They’re Searching for Your Offerings. SEO is not only optimizing the website for keywords but also to generate quality and relevant leads to the business. So, working with a right SEO Company/Agency to overcome the aforesaid hurdles and definitely help you to generate more quality leads.
+			</p>
+						<span><a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal">Get in touch</a></span>
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<div class="item-detail animate-box">
+							<img src="images/online-reputation.png" alt="">
+							<h3>Online Reputation Management (ORM)</h3>
+							<p>Let us improve your online reputation by increasing genuine and positive reviews!. Because Negative review will harm a business a lot. we save you from any such negative ratings </p>
+							<span><a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal">Get in touch</a></span>
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<div class="item-detail animate-box">
+							<img src="images/social-mangment.jpg" alt="">
+							<h3>Social Media Management (SMM)</h3>
+							<p>Social Media Marketing (SMM) is an essential form of online marketing which uses the power of social media networks to build brand image, inform and engage existing customers, and encourage conversation about a business.Online marketing is very cost efficient. Marketing of a product or service is very much essential for the business to run well. Display advertising conveys its advertising message visually using text, logos, animations, videos, photographs, or other graphics. </p>
+							<span><a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal">Get in touch</a></span>
+						</div>
+					</div>
+
+			</div>
+			</div>
+
+<!--mobi page-->
+			<div class="container" id="mobiPage" style="display:none">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="heading-section text-center animate-box">
+							<h2>Mobile App Design &amp; Development</h2>
+							<!--<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>-->
+						</div>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-md-12 col-sm-12">
+						<div class="item-detail animate-box">
+							<img src="images/mobile-design.png" alt="">
+							<h3>Mobile App Designs</h3>
+							<p>Great mobile app design lies at the heart of great user experiences. We understand this and create beautiful and engaging designs, matched by intuitive and innovative interfaces. </p>
+						<span><a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal">Get in touch</a></span>
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<div class="item-detail animate-box">
+							<img src="images/mobile-application-development.jpg" alt="">
+							<h3>Mobile App Development</h3>
+							<p>offers domain expertise in developing and designing apps for Android, iOS and Windows platforms. Our diverse technology skill sets ensures that our  apps drive immersive mobile experiences. We always ensure that every solution that is developed at Tellmobi is efficient in working and bring tangible results to our clients </p>
+							<span><a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal">Get in touch</a></span>
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<div class="item-detail animate-box">
+							<img src="images/emerging-tech.jpeg" alt="">
+							<h3>Emerging Platforms</h3>
+							<p>As the number of devices and interfaces continue to explode, HTML5 and other related web technologies (Phonegap, Angular JS, React Native, Sencha) will play a critical and dominant role in the future of app development. We always use latest trends and technology, we make it look professional and appealing </p>
+							<span><a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal">Get in touch</a></span>
+						</div>
+					</div>
+
+			</div>
+		</div>
+
+
+
+		<div class="container" id="webPage" style="display:none">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="heading-section text-center animate-box">
+						<h2>Web Design &amp; Development</h2>
+						<!--<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>-->
+					</div>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="col-md-12 col-sm-12">
+					<div class="item-detail animate-box">
+						<img src="images/web-design.jpg" alt="">
+						<h3>Web Designing</h3>
+						<p>When you want to know how truly web design works assume of us, we serve you as much you deserve this apparently determines your future. The most essential part is of giving existence to your thoughts. How amazing colors alter every minds in the same way our responsive web services alter minds of audience. </p>
+					<span><a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal">Get in touch</a></span>
+					</div>
+				</div>
+				<div class="col-md-12 col-sm-12">
+					<div class="item-detail animate-box">
+						<img src="images/web-develop.jpg" alt="">
+						<h3>Web Development</h3>
+						<p>We are into building different various types of websites based on complete understanding of each business, target audiences and customers and relevant market. We always ensure that every solution that is developed at webgen is efficient in working and bring tangible results to our clients </p>
+						<span><a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal">Get in touch</a></span>
+					</div>
+				</div>
+				<div class="col-md-12 col-sm-12">
+					<div class="item-detail animate-box">
+						<img src="images/new_wde_2.png" alt="">
+						<h3>Current Technologies.</h3>
+						<p>We always use latest trends and technology, Did you know the fact that, 80% of the people who visit websites actually go through the website because of the Design of the website? The style of a website should reflect the message it is trying to convey. Using animation like this can really draw in visitors to the site and make it look professional and appealing </p>
+						<span><a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal">Get in touch</a></span>
+					</div>
+				</div>
+
+		</div>
+		</div>
+
+			<div class="container" id="mainPage">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<div class="heading-section text-center animate-box">
@@ -538,7 +687,7 @@ cnt=1;
 							<img src="images/web-dev.png" alt="Cycling">
 							<h3>Web Development</h3>
 							<p>We are leading brand name in website development now. We have knowledge and experience in website development. </p>
-							<span><a href="web-development.html" class="btn btn-default">Learn More</a></span>
+							<span><a href="#" onclick="managePages('web');" class="btn btn-default">Learn More</a></span>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-12 col-lg-6">
@@ -546,7 +695,7 @@ cnt=1;
 							<img src="images/mobile-development.png" alt="">
 							<h3>Mobile Development</h3>
 							<p>Specialize in developing mobile applications. Our aim is to understand your ideas and needs and convert them to highly efficient applications. </p>
-							<span><a href="mobile-development.html" class="btn btn-default">Learn More</a></span>
+							<span><a href="#" onclick="managePages('mobi');" class="btn btn-default">Learn More</a></span>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-12 col-lg-6">
@@ -554,7 +703,7 @@ cnt=1;
 							<img src="images/digital-markt.png" alt="">
 							<h3>Digital Marketing</h3>
 							<p>Drive high quality leads and e-commerce sales with Facebook advertising. We build custom audiences and convert consumers using creative. </p>
-							<span><a href="digital-marketing.html" class="btn btn-default">Learn More</a></span>
+							<span><a href="#" onclick="managePages('digi');" class="btn btn-default">Learn More</a></span>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-12 col-lg-6">
@@ -564,7 +713,7 @@ cnt=1;
 
 							<h3>Social Media Management</h3>
 							<p>We influence customers across Twitter, Facebook, Instagram and Snapchat using both paid advertising and organic content management. </p>
-							<span><a href="digital-marketing.html" class="btn btn-default">Learn More</a></span>
+							<span><a href="#" onclick="managePages('digi');" class="btn btn-default">Learn More</a></span>
 						</div>
 					</div>
 					<!--<div class="col-md-4 col-sm-6">
@@ -588,7 +737,7 @@ cnt=1;
 				</div>
 			</div>
 		</div>
-		<div id="fh5co-team-section" class="fh5co-lightgray-section">
+		<div id="fh5co-team-section" class="fh5co-lightgray-section" >
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
@@ -1059,6 +1208,46 @@ container.animate({
 });
 
 			}
+
+function managePages(pageDetail){
+
+$("#sliderFrame").hide();
+$("#firstPage").hide();
+$("#mainPage").hide();
+$("#fh5co-team-section").hide();
+
+if(pageDetail =="digi"){
+$("#secondPage").show();
+$("#digiPage").show();
+$("#text-center-main").html("Digital Marketing");
+$("#subtitle").html("Let's go together in digital world");
+}
+else if(pageDetail =="mobi"){
+	$("#secondPage").show();
+	$("#mobiPage").show();
+	$("#text-center-main").html("Mobile Development");
+	$("#subtitle").html("Creativity is what separates us from others");
+}
+else if(pageDetail =="web"){
+	$("#secondPage").show();
+	$("#webPage").show();
+	$("#text-center-main").html("Web Design &amp; Development");
+	$("#subtitle").html("Creativity is what separates us from others");
+}else{
+	$("#secondPage").hide();
+	$("#webPage").hide();
+	$("#mobiPage").hide();
+	$("#digiPage").hide();
+	$("#sliderFrame").show();
+	$("#firstPage").show();
+	$("#mainPage").show();
+	$("#fh5co-team-section").show();
+
+}
+
+return false;
+}
+
 			</script>
 
 	</body>
