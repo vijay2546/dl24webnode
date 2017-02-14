@@ -362,6 +362,7 @@ position: fixed;
 #fh5co-logo span {
   padding: 0;
   margin: 0;
+  text-transform: lowercase;
   font-weight: 100;
 }
 @media screen and (max-width: 768px) {

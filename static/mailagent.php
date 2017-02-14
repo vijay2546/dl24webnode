@@ -17,17 +17,17 @@ echo $subject;
 echo $email_from ;
 echo $message ;
  // Send mail by PHP Mail Function
- mail("mailat365@gmail.com", $subject, $message, $headers);
+ mail("info@nmfmedia.com", $subject, $message, $headers);
  //
  echo '<script language="javascript">alert("Your request has been sent successfully!! Thank you for your interest with us!")</script>';
  sleep(2);
  header('Location: index.html');
-    
+
  //exit();
 	// They clicked Yes
 
- 
- 
+
+
  }
 
 

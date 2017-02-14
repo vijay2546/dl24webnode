@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Welcome &mdash; @TellMobi</title>
+	<title>Welcome &mdash; @NMFmedia</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="web development @NMF media" />
 	<meta name="keywords" content="web development, mobile web development" />
@@ -168,7 +168,7 @@ color:#fff;
 				<div class="container">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-<h1 id="fh5co-logo"><a id="logo-text" href="#" onclick="managePages('home');">Tell<span>mobi</span></a></h1>
+<h1 id="fh5co-logo"><a id="logo-text" href="#" onclick="managePages('home');">NMF<span>media</span></a></h1>
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
@@ -616,7 +616,7 @@ cnt=1;
 						<div class="item-detail animate-box">
 							<img src="images/mobile-application-development.jpg" alt="">
 							<h3>Mobile App Development</h3>
-							<p>offers domain expertise in developing and designing apps for Android, iOS and Windows platforms. Our diverse technology skill sets ensures that our  apps drive immersive mobile experiences. We always ensure that every solution that is developed at Tellmobi is efficient in working and bring tangible results to our clients </p>
+							<p>offers domain expertise in developing and designing apps for Android, iOS and Windows platforms. Our diverse technology skill sets ensures that our  apps drive immersive mobile experiences. We always ensure that every solution that is developed at NMFmedia is efficient in working and bring tangible results to our clients </p>
 							<span><a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal">Get in touch</a></span>
 						</div>
 					</div>
@@ -1029,8 +1029,8 @@ cnt=1;
 							<ul class="contact-info">
 								<li><i class="icon-map-marker"></i>704 - 288 Eltham Road, Victoria BC, V9V 1J9</li>
 								<li><i class="icon-phone"></i>+ 1 - 250 - 889 - 3893</li>
-								<li><i class="icon-envelope"></i><a href="#">info@tellmobi.com</a></li>
-								<li><i class="icon-globe2"></i><a href="#">www.tellmobi.com</a></li>
+								<li><i class="icon-envelope"></i><a href="#">info@nmfmedia.com</a></li>
+								<li><i class="icon-globe2"></i><a href="#">www.nmfmedia.com</a></li>
 							</ul>
 
 						</div>
@@ -1059,7 +1059,7 @@ cnt=1;
 							</form>
 
 						</div>
-<p style="font-size:0.7em;">Copyright &copy; 2017 TellMobi. All Rights Reserved.</p>
+<p style="font-size:0.7em;">Copyright &copy; 2017 NMFmedia. All Rights Reserved.</p>
 					</div>
 					<!--<div >
 						<div class="col-md-6 col-md-offset-3 text-center">
@@ -1208,9 +1208,9 @@ container.animate({
 });
 
 			}
-
-function managePages(pageDetail){
-
+			var mngpg =false;
+			function managePages(pageDetail){
+				mngpg =true;
 $("#sliderFrame").hide();
 $("#firstPage").hide();
 $("#mainPage").hide();
@@ -1247,7 +1247,27 @@ else if(pageDetail =="web"){
 
 return false;
 }
+$(window).on('hashchange', function() {
+    //location.hash = "noBack";
 
+  // Fragment exists
+	if(mngpg){
+		mngpg =false;
+		return
+	}
+		console.log("back event fired");
+		$("#secondPage").hide();
+		$("#webPage").hide();
+		$("#mobiPage").hide();
+		$("#digiPage").hide();
+		$("#sliderFrame").show();
+		$("#firstPage").show();
+		$("#mainPage").show();
+		$("#fh5co-team-section").show();
+		window.location.hash="#";
+		return false;
+
+});
 			</script>
 
 	</body>
