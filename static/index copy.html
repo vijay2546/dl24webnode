@@ -687,7 +687,7 @@ cnt=1;
 							<img src="images/web-dev.png" alt="Cycling">
 							<h3>Web Development</h3>
 							<p>We are leading brand name in website development now. We have knowledge and experience in website development. </p>
-							<span><a href="#" onclick="managePages('web');" data-toggle="modal" data-target="#myModal" class="btn btn-default">Get in Touch</a></span>
+							<span><a href="#" onclick="managePages('web');" class="btn btn-default">Learn More</a></span>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-12 col-lg-6">
@@ -695,7 +695,7 @@ cnt=1;
 							<img src="images/mobile-development.png" alt="">
 							<h3>Mobile Development</h3>
 							<p>Specialize in developing mobile applications. Our aim is to understand your ideas and needs and convert them to highly efficient applications. </p>
-							<span><a href="#" data-toggle="modal" data-target="#myModal" onclick="managePages('mobi');" class="btn btn-default"> Get in Touch</a></span>
+							<span><a href="#" onclick="managePages('mobi');" class="btn btn-default">Learn More</a></span>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-12 col-lg-6">
@@ -703,7 +703,7 @@ cnt=1;
 							<img src="images/digital-markt.png" alt="">
 							<h3>Digital Marketing</h3>
 							<p>Drive high quality leads and e-commerce sales with Facebook advertising. We build custom audiences and convert consumers using creative. </p>
-							<span><a href="#" data-toggle="modal" data-target="#myModal" onclick="managePages('digi');" class="btn btn-default">Get in Touch</a></span>
+							<span><a href="#" onclick="managePages('digi');" class="btn btn-default">Learn More</a></span>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-12 col-lg-6">
@@ -713,7 +713,7 @@ cnt=1;
 
 							<h3>Social Media Management</h3>
 							<p>We influence customers across Twitter, Facebook, Instagram and Snapchat using both paid advertising and organic content management. </p>
-							<span><a href="#" data-toggle="modal" data-target="#myModal" onclick="managePages('social');" class="btn btn-default">Get in Touch</a></span>
+							<span><a href="#" onclick="managePages('digi');" class="btn btn-default">Learn More</a></span>
 						</div>
 					</div>
 					<!--<div class="col-md-4 col-sm-6">
@@ -1040,18 +1040,18 @@ cnt=1;
 						</div>
 						<div class="col-md-4 animate-box">
 							<h5 class="section-title">Drop us a line</h5>
-							<form class="contact-form" action="javascript:sendQuickEmail()">
-								<div class="form-group" >
+							<form class="contact-form">
+								<div class="form-group" action="mailagent.php" method="post">
 									<label for="subject" class="sr-only">Name</label>
-									<input type="name" name="subject" class="form-control" id="qname" placeholder="Name">
+									<input type="name" name="subject" class="form-control" id="name" placeholder="Name">
 								</div>
 								<div class="form-group">
 									<label for="email" class="sr-only">Email</label>
-									<input type="email" name="email" class="form-control" id="qemail" placeholder="Email">
+									<input type="email" name="email" class="form-control" id="email" placeholder="Email">
 								</div>
 								<div class="form-group">
-									<label for="qmessage" class="sr-only">Message</label>
-									<textarea class="form-control" name="qmessage" id="qmessage" rows="5" placeholder="Message"></textarea>
+									<label for="message" class="sr-only">Message</label>
+									<textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"></textarea>
 								</div>
 								<div class="form-group">
 									<button type="submit" class="btn" style="background-color:#2ce6e1;color:#6c6f6c" >Send a message</button>
@@ -1091,13 +1091,13 @@ cnt=1;
     <div class="modal-content">
       <div class="modal-header">
         <button type="button"  class="close" data-dismiss="modal" aria-label="Close" >X</button>
-        <h3 class="modal-title" style="color:#fff;font-weight:500;font" id="myModalLabel">Request a quote</h3>
+        <h4 class="modal-title" id="myModalLabel">We assure you BEST QUOTE !</h4>
       </div>
       <div class="modal-body">
-				<form class="contact-form" action="javascript:sendEmail()">
-					<div class="form-group" id="selectgrp">
+				<form class="contact-form" action="mailagent.php" method="post">
+					<div class="form-group">
 						<label for="subject" class="sr-only">Request Type</label>
-						<select type="select" name="subject" id="subject" class="form-control"  >
+						<select type="select" name="subject" id="subject" class="form-control" id="request_for" >
 							<option value="0" default>Select Request type</option>
 
 <option value="Web Development">Web Development</option>
@@ -1116,14 +1116,14 @@ cnt=1;
 						<input type="email" name="email" class="form-control" id="email" placeholder="Email">
 					</div>
 					<div class="form-group">
-						<label for="messagebody" class="sr-only">Message</label>
-						<textarea class="form-control" name="messagebody" id="messagebody" rows="4" placeholder="Message"></textarea>
+						<label for="message" class="sr-only">Message</label>
+						<textarea class="form-control" name="message" id="message" rows="4" placeholder="Message"></textarea>
 					</div>
 
-					<div class="modal-footer" >
+					<div class="modal-footer">
 
 						<div class="form-group">
-							<input type="submit"  class="btn"  name="submit"  style="background-color:#2ce6e1;color:#6c6f6c; " value="Send a message"/>
+							<input type="submit" class="btn" name="submit"  style="background-color:#2ce6e1;color:#6c6f6c" value="Send a message" >
 						</div>
 		      </div>
 
@@ -1197,132 +1197,77 @@ container.animate({
 
 			//send message to admin
 			function sendEmail(){
-// 			$.ajax({
-//   type: "POST",
-//   url: "/mailagent.php",
-//   data: {name:"vijay",email:"mailat365@gmail.com"},
-//   success: function(){
-//   console.log("success done");
-//   },
-//   dataType: json
-// });
+			$.ajax({
+  type: "POST",
+  url: "/mailagent.php",
+  data: {name:"vijay",email:"mailat365@gmail.com"},
+  success: function(){
+  console.log("success done");
+  },
+  dataType: json
+});
 
-console.log("send mail ready");
-var subject =$("#subject").val();
-var from =$("#fname").val();
-var message =$("#messagebody").val();
-var to="info@nmfmedia.com";
-var link = "mailto:"+to
-				 + "?subject=" + encodeURIComponent(subject)
-				 + "&body=" + encodeURIComponent(message)
-;
-console.log(link);
-if(from && message){
-window.open(link);
-}
-return false;
 			}
-function sendQuickEmail(){
-	var subject ="Request a quote";
-	var from =$("#qname").val();
-	var message =$("#qmessage").val();
-	var to="info@nmfmedia.com";
-	var link = "mailto:"+to
-					 + "?subject=" + encodeURIComponent(subject)
-					 + "&body=" + encodeURIComponent(message)
-	;
-	console.log(link);
-	if(from && message){
-	window.open(link);
-	}
-	$("#qname").val("");
-	$("#qmessage").val("");
-	$("#qemail").val("");
-	return false;
-
-}
-
 			var mngpg =false;
 			function managePages(pageDetail){
+				mngpg =true;
+$("#sliderFrame").hide();
+$("#firstPage").hide();
+$("#mainPage").hide();
+$("#fh5co-team-section").hide();
 
-				console.log("get in touch called--", pageDetail);
-				switch(pageDetail)
-				{
-case  "web":
-$("#subject").val('Web Development');
-break;
-			case  "mobi":
-			$("#subject").val('Mobile Development');
-			break;
-			case  "digi":
-
-$("#subject").val('Digital Marketing');
-break;
-			case  "social":
-$("#subject").val('Social Media Management');
-break;
-default:{
-	$("#subject").val('0');
+if(pageDetail =="digi"){
+$("#secondPage").show();
+$("#digiPage").show();
+$("#text-center-main").html("Digital Marketing");
+$("#subtitle").html("Let's go together in digital world");
 }
-				}
-			//	mngpg =true;
-// $("#sliderFrame").hide();
-// $("#firstPage").hide();
-// $("#mainPage").hide();
-// $("#fh5co-team-section").hide();
-//
-// if(pageDetail =="digi"){
-// $("#secondPage").show();
-// $("#digiPage").show();
-// $("#text-center-main").html("Digital Marketing");
-// $("#subtitle").html("Let's go together in digital world");
-// }
-// else if(pageDetail =="mobi"){
-// 	$("#secondPage").show();
-// 	$("#mobiPage").show();
-// 	$("#text-center-main").html("Mobile Development");
-// 	$("#subtitle").html("Creativity is what separates us from others");
-// }
-// else if(pageDetail =="web"){
-// 	$("#secondPage").show();
-// 	$("#webPage").show();
-// 	$("#text-center-main").html("Web Design &amp; Development");
-// 	$("#subtitle").html("Creativity is what separates us from others");
-// }else{
-// 	$("#secondPage").hide();
-// 	$("#webPage").hide();
-// 	$("#mobiPage").hide();
-// 	$("#digiPage").hide();
-// 	$("#sliderFrame").show();
-// 	$("#firstPage").show();
-// 	$("#mainPage").show();
-// 	$("#fh5co-team-section").show();
-//
-// }
+else if(pageDetail =="mobi"){
+	$("#secondPage").show();
+	$("#mobiPage").show();
+	$("#text-center-main").html("Mobile Development");
+	$("#subtitle").html("Creativity is what separates us from others");
+}
+else if(pageDetail =="web"){
+	$("#secondPage").show();
+	$("#webPage").show();
+	$("#text-center-main").html("Web Design &amp; Development");
+	$("#subtitle").html("Creativity is what separates us from others");
+}else{
+	$("#secondPage").hide();
+	$("#webPage").hide();
+	$("#mobiPage").hide();
+	$("#digiPage").hide();
+	$("#sliderFrame").show();
+	$("#firstPage").show();
+	$("#mainPage").show();
+	$("#fh5co-team-section").show();
+
+}
 
 return false;
 }
-// $(window).on('hashchange', function() {
-//     //location.hash = "noBack";
-//
-//   // Fragment exists
-// 	if(mngpg){
-// 		mngpg =false;
-// 		return
-// 	}
-// 		console.log("back event fired");
-// 		$("#secondPage").hide();
-// 		$("#webPage").hide();
-// 		$("#mobiPage").hide();
-// 		$("#digiPage").hide();
-// 		$("#sliderFrame").show();
-// 		$("#firstPage").show();
-// 		$("#mainPage").show();
-// 		$("#fh5co-team-section").show();
-// 		window.location.hash="#";
-// 		return false;
-//
-// });
+$(window).on('hashchange', function() {
+    //location.hash = "noBack";
+
+  // Fragment exists
+	if(mngpg){
+		mngpg =false;
+		return
+	}
+		console.log("back event fired");
+		$("#secondPage").hide();
+		$("#webPage").hide();
+		$("#mobiPage").hide();
+		$("#digiPage").hide();
+		$("#sliderFrame").show();
+		$("#firstPage").show();
+		$("#mainPage").show();
+		$("#fh5co-team-section").show();
+		window.location.hash="#";
+		return false;
+
+});
 			</script>
 
 	</body>
